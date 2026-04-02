@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $phone_number = $_POST['phone_number'];
     $address = $_POST['address'];
 
-    $sql = "UPDATE students SET full_ name='$name', cost='$cost' WHERE id=$id";
+    $sql = "UPDATE students SET full_name='$FULL_name', phone_number='$phone_number',address='$address' WHERE id=$id";
     if ($conn->query($sql)) {
         header("Location: read.php"); 
         exit();
