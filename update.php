@@ -1,7 +1,7 @@
 <?php
 include 'config.php';
 
-$id = intval($_GET['id']);
+$id = $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
      $full_name = $_POST['full_name'];
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     }
 }
 
-$sql = "SELECT * FROM products WHERE id = $id";
+$sql = "SELECT * FROM students WHERE id = $id";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 ?>
